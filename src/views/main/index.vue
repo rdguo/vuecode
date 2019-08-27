@@ -2,7 +2,7 @@
   <v-app id="inspire" :dark="controlsOption.hints">
     <Vmenu></Vmenu>
     <Vheader></Vheader>
-    <v-content style="padding-top: 0;background: #eaebf0;">
+    <v-content style="padding-top: 30hv;background: #eaebf0;">
       <transition name="slide-fade">
         <router-view></router-view>
       </transition>
