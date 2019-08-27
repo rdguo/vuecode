@@ -10,10 +10,14 @@ const Home = () => require.ensure([], () => (require('@/views/home/')), 'Home')
 const NotFound = () => require.ensure([], () => (require('@/views/login/login')), 'Login')
 const Announcement = () => require.ensure([], () => (require('@/views/announcement')), 'Announcement')
 const TrafficAnalysis = () => require.ensure([], () => (require('@/views/dataAnalysis/trafficAnalysis/')), 'TrafficAnalysis')
+const flowAnalysis = () => require.ensure([], () => (require('@/views/dataAnalysis/flowAnalysis/')), 'analysis')
 const BaiduMap = () => require.ensure([], () => (require('@/views/dataAnalysis/flowAnalysis/baiduMap')), 'BaiduMap')
 const Mapbox = () => require.ensure([], () => (require('@/views/dataAnalysis/flowAnalysis/mapbox')), 'Mapbox')
 const Mapbox2 = () => require.ensure([], () => (require('@/views/dataAnalysis/flowAnalysis/mapbox2')), 'Mapbox')
 const ArcGIS = () => require.ensure([], () => (require('@/views/dataAnalysis/flowAnalysis/arcGIS')), 'ArcGIS')
+const threeJS = () => require.ensure([], () => (require('@/views/threeJS/')), 'threeJS')
+const resource = () => require.ensure([], () => (require('@/views/resource/')), 'resource')
+const Storage = () => require.ensure([], () => (require('@/views/storage/')), 'Storage')
 
 const router = new Router({
   routes: [
@@ -40,6 +44,10 @@ const router = new Router({
           component: TrafficAnalysis
         },
         {
+          path: '/flowAnalysis',
+          component: flowAnalysis
+        },
+        {
           path: '/baiduMap',
           component: BaiduMap
         },
@@ -54,7 +62,19 @@ const router = new Router({
         {
           path: '/arcGIS',
           component: ArcGIS
-        }
+        },
+        {
+          path: '/threeJS',
+          component: threeJS
+        },
+        {
+          path: '/resource',
+          component: resource
+        },
+        {
+          path: '/storage',
+          component: Storage
+        }       
       ]
     },
     {
